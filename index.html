@@ -309,6 +309,93 @@ img {
 }
 @media(prefers-reduced-motion:reduce){.toyota-shot{animation:none}}
 
+
+/* Center and add breathing room from the AI ranking area downward */
+@media (min-width:761px){
+  .tour,.feature-matrix,.real-screens,.proof,.cta{
+    width:min(1180px,calc(100% - 64px))!important;max-width:1180px!important;
+    margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important
+  }
+  .tour-section,.screen-story,.screen-pair{width:100%!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important}
+}
+@media (max-width:760px){
+  .tour,.feature-matrix,.real-screens,.proof,.cta{
+    width:calc(100% - 28px)!important;max-width:100%!important;
+    margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important
+  }
+  .tour-section,.screen-story,.screen-pair{width:100%!important;max-width:100%!important;box-sizing:border-box!important}
+}
+
+
+/* MOBILE section: use actual app screenshots instead of illustrative mock UI */
+.mobile-real-gallery{position:relative;width:100%;min-height:570px;display:flex;align-items:center;justify-content:center;gap:0;perspective:1200px}
+.mobile-real-shot{position:relative;margin:0;width:min(31%,225px);padding:7px;border-radius:30px;background:linear-gradient(145deg,#263b54,#07111d);border:1px solid rgba(255,255,255,.22);box-shadow:0 25px 58px rgba(0,0,0,.36);overflow:hidden;transition:transform .35s ease,filter .35s ease;z-index:2}
+.mobile-real-shot img{display:block;width:100%!important;height:520px!important;object-fit:cover!important;object-position:top center!important;border-radius:23px;opacity:1!important;visibility:visible!important}
+.mobile-real-shot figcaption{position:absolute;left:13px;right:13px;bottom:13px;padding:8px;background:rgba(3,16,31,.8);backdrop-filter:blur(8px);border-radius:11px;color:#fff;text-align:center;font-size:11px;font-weight:800}
+.mobile-r1{transform:translateX(24px) rotate(-7deg);z-index:1}
+.mobile-r2{transform:translateY(-18px);z-index:3}
+.mobile-r3{transform:translateX(-24px) rotate(7deg);z-index:2}
+.mobile-real-shot:hover{z-index:10;transform:translateY(-12px) scale(1.04) rotate(0)!important;filter:brightness(1.06)}
+@media(max-width:760px){
+ .mobile-real-gallery{min-height:485px;margin-top:20px}
+ .mobile-real-shot{width:35%;padding:5px;border-radius:22px}
+ .mobile-real-shot img{height:430px!important;border-radius:17px}
+ .mobile-r1{transform:translateX(18px) rotate(-6deg)}
+ .mobile-r2{transform:translateY(-12px)}
+ .mobile-r3{transform:translateX(-18px) rotate(6deg)}
+ .mobile-real-shot figcaption{font-size:9px;padding:6px}
+}
+
+
+/* Data sources and quick external stock-information access */
+.data-links-section{padding:86px 0 74px;position:relative;overflow:hidden}
+.data-links-wrap{width:min(1180px,calc(100% - 64px));max-width:1180px;margin:0 auto;box-sizing:border-box}
+.data-link-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.data-link-card{position:relative;padding:30px;border-radius:26px;background:linear-gradient(145deg,rgba(13,42,73,.94),rgba(6,21,39,.97));border:1px solid rgba(91,202,255,.2);box-shadow:0 24px 60px rgba(0,0,0,.2);overflow:hidden}
+.data-link-card:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-75px;top:-85px;background:radial-gradient(circle,rgba(45,188,255,.18),transparent 68%)}
+.data-link-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:rgba(52,188,255,.13);font-size:24px;margin-bottom:16px}
+.data-link-kicker{font-size:11px;letter-spacing:.14em;color:#62d9ff;font-weight:900}
+.data-link-card h3{font-size:25px;line-height:1.35;margin:8px 0 13px}
+.data-link-card p{line-height:1.85;opacity:.82}
+.source-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;padding:15px;border-radius:16px;background:rgba(255,255,255,.045)}
+.source-flow b{padding:7px 9px;border-radius:9px;background:rgba(56,182,255,.12);font-size:12px}.source-flow i{font-style:normal;opacity:.55}.source-flow strong{color:#58ddff;font-size:12px}
+.external-link-demo{margin-top:22px;padding:16px;border-radius:17px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.external-link-demo>div:first-child{display:flex;gap:10px;align-items:center;margin-bottom:13px}.external-link-demo span{font-size:12px}.external-link-demo b{font-size:15px}
+.jump-buttons{display:flex;flex-wrap:wrap;gap:8px}.jump-buttons span{padding:8px 10px;border-radius:10px;background:rgba(42,166,255,.13);border:1px solid rgba(73,193,255,.18);font-weight:800;color:#ccefff}
+.data-links-note{text-align:center;margin:24px auto 0;padding:15px 20px;max-width:820px;border-radius:999px;background:rgba(47,183,255,.08);border:1px solid rgba(74,196,255,.15);font-weight:800}
+@media(max-width:760px){
+ .data-links-section{padding:62px 0 54px}.data-links-wrap{width:calc(100% - 28px)}
+ .data-link-grid{grid-template-columns:1fr;gap:14px}.data-link-card{padding:23px 20px;border-radius:21px}
+ .data-link-card h3{font-size:21px}.data-links-note{border-radius:18px;font-size:13px}
+}
+
+
+/* DATA & QUICK LINKS: conceptual background visual for EDINET/data sources and quick links */
+.data-links-section{
+  position:relative;
+  isolation:isolate;
+  background-image:
+    linear-gradient(90deg,rgba(3,15,30,.94),rgba(3,15,30,.82) 48%,rgba(3,15,30,.91)),
+    url("./jsc_data_sources_links_visual.png");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.data-links-section::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(2,12,25,.25),rgba(2,12,25,.58));
+  pointer-events:none;
+}
+.data-links-section .data-links-wrap{position:relative;z-index:1}
+.data-links-section .head{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}
+.data-links-section .data-link-card{
+  background:linear-gradient(145deg,rgba(8,31,56,.88),rgba(5,17,32,.92));
+  backdrop-filter:blur(8px);
+}
+@media(max-width:760px){
+ .data-links-section{background-position:52% center;background-size:auto 100%;}
+}
+
 </style>
 </head>
 <body>
@@ -388,12 +475,44 @@ img {
 
  <div class="tour-section mobile-tour">
   <div class="tour-copy"><span>05 / MOBILE</span><h3>同じ機能を、<br>スマートフォンでも。</h3><p>PCでは一覧性を重視し、スマートフォンではカード中心の表示へ。外出先でもお気に入りやAI分析、優待・配当情報を確認できます。</p></div>
-  <div class="phones">
-   <div class="phone-real"><div class="notch"></div><header>📈 日本株チェッカー</header><div class="phone-summary">今日の動向見通し<b>AI総合判定</b></div><div class="phone-chart"></div><div class="phone-kpi"><span>PER<b>9.8</b></span><span>ROE<b>10.6%</b></span></div><div class="phone-row">✨ AIおすすめ銘柄 <b>→</b></div><div class="phone-row">💰 今月の配当利権候補 <b>→</b></div></div>
-   <div class="phone-real second"><div class="notch"></div><header>💰 配当検索</header><div class="phone-filter">2026年　10月　検索</div><div class="phone-stock"><small>7203</small><b>サンプル株式会社</b><span>利権確定日　10月末候補</span></div><div class="phone-stock"><small>8306</small><b>サンプルフィナンシャル</b><span>配当情報を確認</span></div><div class="phone-stock"><small>6758</small><b>サンプルグループ</b><span>詳細評価 →</span></div></div>
+  <div class="mobile-real-gallery" aria-label="日本株チェッカーのスマートフォン実画面">
+   <figure class="mobile-real-shot mobile-r1"><img src="./toyota_real_1.png" alt="トヨタ自動車の株銘柄詳細評価 スマートフォン実画面" loading="lazy" decoding="async"><figcaption>銘柄詳細評価</figcaption></figure>
+   <figure class="mobile-real-shot mobile-r2"><img src="./jsc_benefits_20261008.png" alt="株主優待検索 スマートフォン実画面" loading="lazy" decoding="async"><figcaption>株主優待検索</figcaption></figure>
+   <figure class="mobile-real-shot mobile-r3"><img src="./jsc_dividend_search_20261008.png" alt="配当検索 スマートフォン実画面" loading="lazy" decoding="async"><figcaption>配当検索</figcaption></figure>
   </div>
  </div>
 </div>
+</section>
+
+
+<section id="data-links" class="data-links-section">
+ <div class="wrap data-links-wrap">
+  <div class="head">
+   <span class="pill">DATA & QUICK LINKS</span>
+   <h2>信頼できる情報を取得し、<br>関連情報へすぐアクセス。</h2>
+   <p>検索結果の表示だけで終わらず、企業情報・財務情報などの取得データを分析に活用。さらに、その銘柄の株情報を深掘りしたいときは、関連情報へスムーズに移動できます。</p>
+  </div>
+  <div class="data-link-grid">
+   <article class="data-link-card source-card">
+    <div class="data-link-icon">🏛️</div>
+    <span class="data-link-kicker">OFFICIAL DATA</span>
+    <h3>EDINETなどから<br>企業・財務情報を取得</h3>
+    <p>財務実績などはEDINETをはじめとした情報源から取得し、株価・市場データ等と組み合わせて分析。複数の判断材料を一画面に整理します。</p>
+    <div class="source-flow"><b>EDINET</b><i>＋</i><b>市場データ</b><i>＋</i><b>企業情報</b><strong>→ AI分析</strong></div>
+   </article>
+   <article class="data-link-card jump-card">
+    <div class="data-link-icon">↗</div>
+    <span class="data-link-kicker">QUICK ACCESS</span>
+    <h3>検索した銘柄から<br>関連する株情報へすぐ移動</h3>
+    <p>検索結果を起点に、四季報などの企業情報や株価チャートなど、その銘柄をさらに確認するための関連ページを簡単に開けます。</p>
+    <div class="external-link-demo">
+      <div><span>7203</span><b>トヨタ自動車</b></div>
+      <div class="jump-buttons"><span>企業・四季報情報 ↗</span><span>株価チャート ↗</span><span>関連株情報 ↗</span></div>
+    </div>
+   </article>
+  </div>
+  <div class="data-links-note">検索 → AI分析 → 詳細確認 → 外部の関連情報まで、銘柄調査の流れを途切れさせません。</div>
+ </div>
 </section>
 
 <section id="strengths"><div class="wrap"><div class="head"><span class="pill">5 CORE FEATURES</span><h2>日本株チェッカー 5つの強み</h2><p>「予測する・分析する・探す・利権月を確認する」を、ひとつのWebアプリで。</p></div>
