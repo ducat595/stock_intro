@@ -426,6 +426,43 @@ img {
  .data-links-visual-frame img{width:100% !important}
 }
 
+
+/* Revised compact explanation: smaller, clearer, no oversized dark cards */
+.data-link-grid,.data-links-note{display:none!important}
+.data-feature-flow{
+ display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;
+ gap:14px;margin:28px auto 18px;max-width:1080px
+}
+.data-feature-step{
+ display:flex;gap:13px;align-items:flex-start;padding:18px 17px;
+ border-radius:17px;background:rgba(16,43,68,.72);
+ border:1px solid rgba(91,202,255,.17);min-width:0
+}
+.data-feature-step .step-no{
+ flex:0 0 auto;display:grid;place-items:center;width:35px;height:35px;border-radius:11px;
+ background:rgba(67,193,255,.13);color:#63dcff;font-size:11px;font-weight:900
+}
+.data-feature-step b{display:block;font-size:16px;margin:2px 0 7px;color:#f1f8ff}
+.data-feature-step p{margin:0;font-size:12px;line-height:1.7;color:rgba(224,239,251,.72)}
+.flow-arrow{align-self:center;color:#5bd9ff;font-size:22px;font-weight:900}
+.quick-link-example{
+ max-width:820px;margin:0 auto;padding:13px 16px;display:flex;align-items:center;
+ justify-content:space-between;gap:18px;border-radius:15px;
+ background:rgba(22,55,82,.56);border:1px solid rgba(91,202,255,.16)
+}
+.quick-stock{display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+.quick-stock small{font-size:10px;color:#62d9ff;font-weight:800}
+.quick-stock strong{font-size:13px}
+.quick-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px}
+.quick-actions span{padding:7px 9px;border-radius:9px;background:rgba(47,170,238,.13);border:1px solid rgba(76,190,249,.18);font-size:11px;font-weight:800;color:#d9f4ff}
+@media(max-width:760px){
+ .data-feature-flow{grid-template-columns:1fr;gap:9px;margin-top:20px}
+ .flow-arrow{transform:rotate(90deg);justify-self:center;font-size:18px;line-height:1}
+ .data-feature-step{padding:15px}
+ .quick-link-example{flex-direction:column;align-items:flex-start}
+ .quick-actions{justify-content:flex-start}
+}
+
 </style>
 </head>
 <body>
@@ -529,26 +566,26 @@ img {
  </figure>
 </div>
 
-<div class="data-link-grid">
-   <article class="data-link-card source-card">
-    <div class="data-link-icon">🏛️</div>
-    <span class="data-link-kicker">OFFICIAL DATA</span>
-    <h3>EDINETなどから<br>企業・財務情報を取得</h3>
-    <p>財務実績などはEDINETをはじめとした情報源から取得し、株価・市場データ等と組み合わせて分析。複数の判断材料を一画面に整理します。</p>
-    <div class="source-flow"><b>EDINET</b><i>＋</i><b>市場データ</b><i>＋</i><b>企業情報</b><strong>→ AI分析</strong></div>
-   </article>
-   <article class="data-link-card jump-card">
-    <div class="data-link-icon">↗</div>
-    <span class="data-link-kicker">QUICK ACCESS</span>
-    <h3>検索した銘柄から<br>関連する株情報へすぐ移動</h3>
-    <p>検索結果を起点に、四季報などの企業情報や株価チャートなど、その銘柄をさらに確認するための関連ページを簡単に開けます。</p>
-    <div class="external-link-demo">
-      <div><span>7203</span><b>トヨタ自動車</b></div>
-      <div class="jump-buttons"><span>企業・四季報情報 ↗</span><span>株価チャート ↗</span><span>関連株情報 ↗</span></div>
-    </div>
-   </article>
+<div class="data-feature-flow">
+  <div class="data-feature-step">
+    <span class="step-no">01</span>
+    <div><b>情報を取得</b><p>EDINETの財務情報や市場データなど、銘柄分析に必要な情報を取得します。</p></div>
   </div>
-  <div class="data-links-note">検索 → AI分析 → 詳細確認 → 外部の関連情報まで、銘柄調査の流れを途切れさせません。</div>
+  <span class="flow-arrow">→</span>
+  <div class="data-feature-step">
+    <span class="step-no">02</span>
+    <div><b>AIでまとめて分析</b><p>取得した情報を整理し、銘柄の評価や今後の見通しなどを分かりやすく表示します。</p></div>
+  </div>
+  <span class="flow-arrow">→</span>
+  <div class="data-feature-step">
+    <span class="step-no">03</span>
+    <div><b>気になる情報をすぐ確認</b><p>検索した銘柄から、四季報などの企業情報・株価チャート・関連株情報をすぐに開けます。</p></div>
+  </div>
+</div>
+<div class="quick-link-example">
+  <div class="quick-stock"><small>検索例</small><strong>7203　トヨタ自動車</strong></div>
+  <div class="quick-actions"><span>企業・四季報情報 ↗</span><span>株価チャート ↗</span><span>関連株情報 ↗</span></div>
+</div>
  </div>
 </section>
 
