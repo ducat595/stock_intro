@@ -6,17 +6,17 @@
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>日本株チェッカー｜AI×企業情報×市場データの総合判断ツール</title>
 <meta content="午前・昼・午後・大引けの株価動向予測、AIおすすめランキング、月別の優待利権・配当利権確定銘柄検索をひとつに。PC・スマホ対応の日本株総合判断ツール。" name="description"/>
-<link rel="canonical" href="https://ducat595.github.io/stock_intro/">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<link href="https://ducat595.github.io/stock_intro/" rel="canonical"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="日本株チェッカー" name="author"/>
-<meta content="日本株,株価予測,AI株分析,AIおすすめ銘柄,株主優待,配当,権利確定月,投資判断,株式投資,銘柄分析" name="keywords"/>
-<meta property="og:type" content="website">
+<meta content="日本株,株価予測,AI株分析,AIおすすめ銘柄,株主優待,配当,権利確定月,投資判断,株式投資,銘柄分析" name="keywords">
+<meta content="website" property="og:type"/>
 <meta content="ja_JP" property="og:locale"/>
-<meta property="og:site_name" content="日本株チェッカー">
+<meta content="日本株チェッカー" property="og:site_name">
 <meta content="日本株チェッカー｜AI×企業情報×市場データの総合判断ツール" property="og:title"/>
-<meta content="午前・昼・午後・大引けの株価動向予測、AIおすすめランキング、月別の株主優待・配当利権確定銘柄検索をひとつに。PC・スマホ対応。" property="og:description"/>
-<meta property="og:url" content="https://ducat595.github.io/stock_intro/">
-<meta name="twitter:card" content="summary_large_image">
+<meta content="午前・昼・午後・大引けの株価動向予測、AIおすすめランキング、月別の株主優待・配当利権確定銘柄検索をひとつに。PC・スマホ対応。" property="og:description">
+<meta content="https://ducat595.github.io/stock_intro/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <!-- Google tag (GA4) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-63JPEC9VPV"></script>
 <script>
@@ -619,11 +619,58 @@ section .head h2{
  #app-tour>.wrap>.head h2,#data-links .head h2,.real-screens .head h2{font-size:clamp(29px,9vw,40px)!important}
  #app-tour{padding-bottom:42px!important}#data-links,.real-screens{padding-top:56px!important}
 }
+
+/* Final alignment fix: 01–05 use one common layout */
+#app-tour .tour-section{
+ display:grid!important;
+ grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)!important;
+ align-items:center!important;
+ width:min(1080px,calc(100% - 80px))!important;
+ max-width:1080px!important;
+ margin:52px auto!important;
+ padding:32px 36px!important;
+ gap:48px!important;
+ box-sizing:border-box!important;
+}
+#app-tour .tour-section.reverse .tour-copy{order:2!important}
+#app-tour .tour-section.reverse > :not(.tour-copy){order:1!important}
+#app-tour .tour-section:not(.reverse) .tour-copy{order:1!important}
+#app-tour .tour-section:not(.reverse) > :not(.tour-copy){order:2!important}
+#app-tour .tour-section .tour-copy{
+ width:auto!important;max-width:410px!important;margin:0!important;
+}
+#app-tour .tour-section .real-ui,
+#app-tour .tour-section .toyota-real-showcase,
+#app-tour .tour-section .forecast-real-wrap,
+#app-tour .tour-section .mobile-real-gallery{
+ width:100%!important;max-width:540px!important;margin:0 auto!important;box-sizing:border-box!important;
+}
+@media(max-width:760px){
+ #app-tour .tour-section{
+  grid-template-columns:1fr!important;
+  width:calc(100% - 28px)!important;
+  margin:30px auto!important;
+  padding:22px 16px!important;
+  gap:22px!important;
+ }
+ #app-tour .tour-section .tour-copy{order:1!important;max-width:100%!important}
+ #app-tour .tour-section > :not(.tour-copy){order:2!important;max-width:100%!important}
+}
+
+#data-links{padding-top:64px!important;padding-bottom:58px!important}
+.ai-recommend-real-section{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important}
+.ai-real-points{display:grid;gap:10px;margin-top:24px}
+.ai-real-points>div{padding:13px 15px;border:1px solid rgba(89,193,255,.17);border-radius:14px;background:rgba(20,54,83,.42)}
+.ai-real-points b{display:block;font-size:14px;margin-bottom:4px}.ai-real-points small{display:block;color:var(--muted);font-size:12px;line-height:1.6}
+.ai-real-screen{width:100%;max-width:520px;margin:0 auto;padding:14px;border:1px solid rgba(111,201,255,.22);border-radius:24px;background:linear-gradient(180deg,rgba(18,51,78,.94),rgba(8,27,44,.94));box-shadow:0 24px 60px rgba(0,0,0,.22);box-sizing:border-box}
+.ai-real-screen-head{display:flex;justify-content:space-between;align-items:center;padding:3px 4px 12px;color:#d9f4ff;font-size:12px}.ai-real-screen-head span{padding:5px 9px;border-radius:999px;background:rgba(61,177,255,.13);color:#68dcff;font-weight:800}
+.ai-real-screen-viewport{max-height:610px;overflow:hidden;border-radius:16px;background:#fff}.ai-real-screen-viewport img{display:block;width:100%;height:auto;object-position:top}.ai-real-screen figcaption{padding:11px 3px 2px;color:rgba(210,235,248,.7);font-size:11px;text-align:center}
+@media(max-width:760px){#data-links{padding-top:46px!important}.ai-recommend-real-section{grid-template-columns:1fr!important}.ai-real-screen{max-width:500px!important}.ai-real-screen-viewport{max-height:560px}}
 </style>
-<meta property="og:image" content="https://ducat595.github.io/stock_intro/japan_stock_checker_fuji_20261008.png">
-<meta property="og:image:alt" content="日本株チェッカー">
-<meta name="twitter:image" content="https://ducat595.github.io/stock_intro/japan_stock_checker_fuji_20261008.png">
-</head>
+<meta content="https://ducat595.github.io/stock_intro/japan_stock_checker_fuji_20261008.png" property="og:image"/>
+<meta content="日本株チェッカー" property="og:image:alt"/>
+<meta content="https://ducat595.github.io/stock_intro/japan_stock_checker_fuji_20261008.png" name="twitter:image"/>
+</meta></meta></meta></head>
 <body>
 <header><div class="wrap nav"><div class="brand"><img alt="日本株チェッカー アイコン" class="brand-icon" decoding="async" fetchpriority="high" loading="eager" src="./japan_stock_checker_fuji_20261008.png"/>日本株チェッカー</div><nav class="navlinks"><a href="#strengths">強み</a><a href="#forecast">動向予測</a><a href="#tools">機能</a><a href="#devices">対応端末</a><a class="btn" href="https://ducat595.github.io/stock_app/">アプリを開く</a></nav></div></header>
 <main>
@@ -641,64 +688,6 @@ section .head h2{
 <img alt="日本株チェッカーのスマートフォン初期画面" decoding="async" fetchpriority="high" loading="eager" src="./jsc_stock_forecast_20261008.png"/>
 </div>
 </div>
-</section>
-<section class="app-tour" id="app-tour">
-<div class="wrap">
-<div class="head"><span class="pill">HOW IT WORKS</span><h2>銘柄を探すところから、<br/>判断材料を確認するところまで。</h2><p>日本株チェッカーの使い方を、5つの流れに沿って紹介します。</p></div>
-<div class="tour-shell">
-<div class="app-browser"><span></span><span></span><span></span><div>日本株チェッカー</div></div>
-<div class="app-nav-demo"><b>📈 日本株チェッカー</b><span class="active">ホーム</span><span>株銘柄詳細評価</span><span>お気に入り</span><span>一括チェック</span><span>為替情報</span><span>AIおすすめ銘柄</span><span>値上がり・値下がり</span><span>株主優待検索</span><span>配当検索</span></div>
-<div class="app-home-demo">
-<div class="app-welcome"><small>日本株のチェック・評価・今日の株価予想をまとめて確認</small><h3>必要な情報を、ひとつの画面から。</h3><p>株価・財務・テクニカル・ニュース・優待・配当まで。</p></div>
-<div class="quick-grid"><div><b>🔎 株銘柄詳細評価</b><small>銘柄を深掘り</small></div><div><b>✨ AIおすすめ銘柄</b><small>候補をランキング</small></div><div><b>🎁 株主優待検索</b><small>利権確定月から探す</small></div><div><b>💰 配当検索</b><small>月別候補を確認</small></div></div>
-</div>
-</div>
-<div class="tour-section">
-<div class="tour-copy"><span>01 / 銘柄詳細分析</span><h3>銘柄を検索すると、<br/>判断材料を一画面に集約。</h3><p>株価、PER・PBR・ROEなどの指標、財務実績、テクニカル、決算・ニュースなどをまとめて確認。複数サイトを行き来する手間を減らします。</p></div>
-<div aria-label="トヨタ自動車の実画面4枚" class="toyota-real-showcase">
-<figure class="toyota-shot shot-a"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面1" decoding="async" loading="lazy" src="./toyota_real_1.png"/><figcaption>株価・目標株価</figcaption></figure>
-<figure class="toyota-shot shot-b"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面2" decoding="async" loading="lazy" src="./toyota_real_2.png"/><figcaption>長期視点・動向見通し</figcaption></figure>
-<figure class="toyota-shot shot-c"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面3" decoding="async" loading="lazy" src="./toyota_real_3.png"/><figcaption>時間帯別予測</figcaption></figure>
-<figure class="toyota-shot shot-d"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面4" decoding="async" loading="lazy" src="./toyota_real_4.png"/><figcaption>大引け・重要ポイント</figcaption></figure>
-</div>
-</div>
-<div class="kpis"><div><small>PER</small><b>9.8倍</b></div><div><small>PBR</small><b>1.04倍</b></div><div><small>ROE</small><b>10.6%</b></div><div><small>自己資本比率</small><b>38.2%</b></div></div>
-<div class="ui-chart"></div>
-</div>
-
-<div class="tour-section reverse">
-<div class="tour-copy"><span>02 / 株価動向予測</span><h3>午前・昼・午後・大引け。<br/>1日の節目で動向を予測。</h3><p>企業情報・ニュース・市場データ・テクニカルなどを分析材料として、AIを活用した独自判定を表示。時間帯ごとに変化する判断材料を追えます。</p></div>
-<div class="forecast-real-wrap">
-<div class="forecast-real-glow"></div>
-<figure class="forecast-real-phone">
-<span class="live-chip">REAL APP SCREEN</span>
-<img alt="トヨタ自動車 今日の動向見通し 実画面" decoding="async" loading="lazy" src="./toyota_real_3.png"/>
-<figcaption>トヨタ自動車 / 今日の動向見通し</figcaption>
-</figure>
-<figure class="forecast-real-phone forecast-second">
-<img alt="トヨタ自動車 大引け予測と重要ポイント 実画面" decoding="async" loading="lazy" src="./toyota_real_4.png"/>
-<figcaption>大引け予測 / 今日の重要ポイント</figcaption>
-</figure>
-</div>
-</div><div class="forecast-line"></div><div class="ai-note"><b>AI総合判定</b><p>企業情報・市場環境・テクニカル・材料を総合して判断材料を提示</p></div>
-
-<div class="tour-section ai-recommend-section">
-<div class="tour-copy"><span>03 / AIおすすめランキング</span><h3>分析結果から、<br/>AIおすすめ銘柄をランキング。</h3><p>候補探しの入口としてAIおすすめ銘柄を表示。評価スコアや主要指標を見ながら、気になる銘柄を詳細評価へつなげます。</p></div>
-<div class="real-ui"><div class="panel-title">✨ AIおすすめ銘柄</div><div class="ai-ranking"><div><strong>1</strong><section><b>注目銘柄 A</b><small>業種 / 主要指標</small></section><em>82</em><i>強くおすすめ</i></div><div><strong>2</strong><section><b>注目銘柄 B</b><small>業種 / 主要指標</small></section><em>76</em><i>強くおすすめ</i></div><div><strong>3</strong><section><b>注目銘柄 C</b><small>業種 / 主要指標</small></section><em>69</em><i>おすすめ</i></div></div></div>
-</div>
-<div class="tour-section reverse">
-<div class="tour-copy"><span>04 / 株主優待・配当検索</span><h3>優待も配当も、<br/>利権確定月から探せる。</h3><p>月を指定して株主優待・配当の対象候補をカード形式で確認。銘柄探しから詳細評価へ、そのまま進めます。</p></div>
-<div class="real-ui rights-ui"><div class="rights-tabs"><b>🎁 株主優待検索</b><b class="sel">💰 配当検索</b></div><div class="filter-demo"><label>対象年<strong>2026年</strong></label><label>利権確定月<strong>10月</strong></label><button>検索</button></div><div class="rights-cards"><div><small>7203</small><b>サンプル株式会社</b><span>利権確定日　10月末候補</span><em>1株配当　—</em></div><div><small>8306</small><b>サンプルフィナンシャル</b><span>利権確定日　10月末候補</span><em>詳細情報を確認</em></div></div></div>
-</div>
-<div class="tour-section mobile-tour">
-<div class="tour-copy"><span>05 / スマートフォン対応</span><h3>同じ機能を、<br/>スマートフォンでも。</h3><p>PCでは一覧性を重視し、スマートフォンではカード中心の表示へ。外出先でもお気に入りやAI分析、優待・配当情報を確認できます。</p></div>
-<div aria-label="日本株チェッカーのスマートフォン実画面" class="mobile-real-gallery">
-<figure class="mobile-real-shot mobile-r1"><img alt="トヨタ自動車の株銘柄詳細評価 スマートフォン実画面" decoding="async" loading="lazy" src="./toyota_real_1.png"/><figcaption>銘柄詳細評価</figcaption></figure>
-<figure class="mobile-real-shot mobile-r2"><img alt="株主優待検索 スマートフォン実画面" decoding="async" loading="lazy" src="./jsc_benefits_20261008.png"/><figcaption>株主優待検索</figcaption></figure>
-<figure class="mobile-real-shot mobile-r3"><img alt="配当検索 スマートフォン実画面" decoding="async" loading="lazy" src="./jsc_dividend_search_20261008.png"/><figcaption>配当検索</figcaption></figure>
-</div>
-</div>
-
 </section>
 <section class="data-links-section" id="data-links">
 <div class="wrap data-links-wrap">
@@ -734,10 +723,72 @@ section .head h2{
 <div class="quick-actions"><span>企業・四季報情報 ↗</span><span>株価チャート ↗</span><span>関連株情報 ↗</span></div>
 </div>
 </div>
+</section><section class="app-tour" id="app-tour">
+<div class="wrap">
+<div class="head"><span class="pill">HOW IT WORKS</span><h2>銘柄を探すところから、<br/>判断材料を確認するところまで。</h2><p>5つの主要機能を、実際の画面イメージとともに順番に紹介します。</p></div>
+<div class="tour-shell">
+<div class="app-browser"><span></span><span></span><span></span><div>日本株チェッカー</div></div>
+<div class="app-nav-demo"><b>📈 日本株チェッカー</b><span class="active">ホーム</span><span>株銘柄詳細評価</span><span>お気に入り</span><span>一括チェック</span><span>為替情報</span><span>AIおすすめ銘柄</span><span>値上がり・値下がり</span><span>株主優待検索</span><span>配当検索</span></div>
+<div class="app-home-demo">
+<div class="app-welcome"><small>日本株のチェック・評価・今日の株価予想をまとめて確認</small><h3>必要な情報を、ひとつの画面から。</h3><p>株価・財務・テクニカル・ニュース・優待・配当まで。</p></div>
+<div class="quick-grid"><div><b>🔎 株銘柄詳細評価</b><small>銘柄を深掘り</small></div><div><b>✨ AIおすすめ銘柄</b><small>候補をランキング</small></div><div><b>🎁 株主優待検索</b><small>利権確定月から探す</small></div><div><b>💰 配当検索</b><small>月別候補を確認</small></div></div>
+</div>
+</div>
+<div class="tour-section">
+<div class="tour-copy"><span>01 / 銘柄詳細分析</span><h3>銘柄を検索すると、<br/>判断材料を一画面に集約。</h3><p>株価、PER・PBR・ROEなどの指標、財務実績、テクニカル、決算・ニュースなどをまとめて確認。複数サイトを行き来する手間を減らします。</p></div>
+<div aria-label="トヨタ自動車の実画面4枚" class="toyota-real-showcase">
+<figure class="toyota-shot shot-a"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面1" decoding="async" loading="lazy" src="./toyota_real_1.png"/><figcaption>株価・目標株価</figcaption></figure>
+<figure class="toyota-shot shot-b"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面2" decoding="async" loading="lazy" src="./toyota_real_2.png"/><figcaption>長期視点・動向見通し</figcaption></figure>
+<figure class="toyota-shot shot-c"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面3" decoding="async" loading="lazy" src="./toyota_real_3.png"/><figcaption>時間帯別予測</figcaption></figure>
+<figure class="toyota-shot shot-d"><img alt="7203 トヨタ自動車 株銘柄詳細評価 実画面4" decoding="async" loading="lazy" src="./toyota_real_4.png"/><figcaption>大引け・重要ポイント</figcaption></figure>
+</div>
+</div>
+<div class="kpis"><div><small>PER</small><b>9.8倍</b></div><div><small>PBR</small><b>1.04倍</b></div><div><small>ROE</small><b>10.6%</b></div><div><small>自己資本比率</small><b>38.2%</b></div></div>
+<div class="ui-chart"></div>
+</div>
+<div class="tour-section reverse">
+<div class="tour-copy"><span>02 / 株価動向予測</span><h3>午前・昼・午後・大引け。<br/>1日の節目で動向を予測。</h3><p>企業情報・ニュース・市場データ・テクニカルなどを分析材料として、AIを活用した独自判定を表示。時間帯ごとに変化する判断材料を追えます。</p></div>
+<div class="forecast-real-wrap">
+<div class="forecast-real-glow"></div>
+<figure class="forecast-real-phone">
+<span class="live-chip">REAL APP SCREEN</span>
+<img alt="トヨタ自動車 今日の動向見通し 実画面" decoding="async" loading="lazy" src="./toyota_real_3.png"/>
+<figcaption>トヨタ自動車 / 今日の動向見通し</figcaption>
+</figure>
+<figure class="forecast-real-phone forecast-second">
+<img alt="トヨタ自動車 大引け予測と重要ポイント 実画面" decoding="async" loading="lazy" src="./toyota_real_4.png"/>
+<figcaption>大引け予測 / 今日の重要ポイント</figcaption>
+</figure>
+</div>
+</div><div class="forecast-line"></div><div class="ai-note"><b>AI総合判定</b><p>企業情報・市場環境・テクニカル・材料を総合して判断材料を提示</p></div>
+<div class="tour-section ai-recommend-real-section">
+<div class="tour-copy"><span>03 / AIおすすめランキング</span>
+<h3>AIおすすめ銘柄を、<br/>ランキングで確認。</h3>
+<p>現在値・目標株価・陽線／陰線などの取得情報をもとに候補銘柄を評価し、スコア順に表示します。気になる銘柄はそのまま詳細確認へ進めます。</p>
+<div class="ai-real-points">
+<div><b>最新データで再評価</b><small>取得済みの最新情報を使ってランキングを更新</small></div>
+<div><b>上位10社を一覧表示</b><small>おすすめ候補20社の中からスコア順に確認</small></div>
+<div><b>実際のアプリ画面</b><small>右側は日本株チェッカーの実スクリーンショットです</small></div>
+</div></div>
+<figure class="ai-real-screen">
+<div class="ai-real-screen-head"><span>実際の画面</span><b>AIおすすめ銘柄</b></div>
+<div class="ai-real-screen-viewport"><img alt="日本株チェッカー AIおすすめ銘柄ランキングの実際の画面" loading="lazy" src="./IMG_9806.PNG"/></div>
+<figcaption>AIおすすめ銘柄 / 利益可能性スコア 上位10社</figcaption>
+</figure>
+</div>
+<div class="tour-section">
+<div class="tour-copy"><span>04 / 株主優待・配当検索</span><h3>優待も配当も、<br/>利権確定月から探せる。</h3><p>月を指定して株主優待・配当の対象候補をカード形式で確認。銘柄探しから詳細評価へ、そのまま進めます。</p></div>
+<div class="real-ui rights-ui"><div class="rights-tabs"><b>🎁 株主優待検索</b><b class="sel">💰 配当検索</b></div><div class="filter-demo"><label>対象年<strong>2026年</strong></label><label>利権確定月<strong>10月</strong></label><button>検索</button></div><div class="rights-cards"><div><small>7203</small><b>サンプル株式会社</b><span>利権確定日　10月末候補</span><em>1株配当　—</em></div><div><small>8306</small><b>サンプルフィナンシャル</b><span>利権確定日　10月末候補</span><em>詳細情報を確認</em></div></div></div>
+</div>
+<div class="tour-section">
+<div class="tour-copy"><span>05 / スマートフォン対応</span><h3>同じ機能を、<br/>スマートフォンでも。</h3><p>PCでは一覧性を重視し、スマートフォンではカード中心の表示へ。外出先でもお気に入りやAI分析、優待・配当情報を確認できます。</p></div>
+<div aria-label="日本株チェッカーのスマートフォン実画面" class="mobile-real-gallery">
+<figure class="mobile-real-shot mobile-r1"><img alt="トヨタ自動車の株銘柄詳細評価 スマートフォン実画面" decoding="async" loading="lazy" src="./toyota_real_1.png"/><figcaption>銘柄詳細評価</figcaption></figure>
+<figure class="mobile-real-shot mobile-r2"><img alt="株主優待検索 スマートフォン実画面" decoding="async" loading="lazy" src="./jsc_benefits_20261008.png"/><figcaption>株主優待検索</figcaption></figure>
+<figure class="mobile-real-shot mobile-r3"><img alt="配当検索 スマートフォン実画面" decoding="async" loading="lazy" src="./jsc_dividend_search_20261008.png"/><figcaption>配当検索</figcaption></figure>
+</div>
+</div>
 </section>
-
-
-
 
 <section class="real-screens">
 <div class="wrap">
@@ -762,7 +813,6 @@ section .head h2{
 </div>
 </div>
 </section>
-
 <section class="cta"><div class="wrap"><div class="cta-box"><h2>情報を集める時間を、判断する時間へ。</h2><p>株価動向予測、AI分析、銘柄ランキング、優待・配当検索をひとつの画面から。</p><a class="btn btn-primary" href="https://ducat595.github.io/stock_app/">日本株チェッカーを使ってみる →</a></div><p class="notice">本ツールが表示する株価動向予測、AIによる評価・判定、ランキング、その他の情報は、将来の株価・利益・投資成果を保証するものではなく、特定の金融商品の売買を推奨するものではありません。本ツールは投資判断の参考情報を提供するものであり、株式の購入・売却その他の取引に関する最終的な判断および結果については、利用者ご自身の責任で行ってください。</p></div></section>
 </main>
 <footer>© 日本株チェッカー</footer>
