@@ -396,6 +396,36 @@ img {
  .data-links-section{background-position:52% center;background-size:auto 100%;}
 }
 
+
+/* DATA & QUICK LINKS: show the concept visual as foreground web content */
+.data-links-section{
+  background-image:none !important;
+  background:transparent !important;
+}
+.data-links-section::before{display:none !important}
+.data-links-visual{
+  width:100%;margin:30px auto 28px;position:relative;
+}
+.data-links-visual-frame{
+  margin:0;overflow:hidden;border-radius:26px;
+  border:1px solid rgba(91,202,255,.24);
+  background:rgba(7,24,43,.82);
+  box-shadow:0 26px 65px rgba(0,0,0,.28);
+}
+.data-links-visual-frame img{
+  display:block;width:100% !important;height:auto !important;
+  max-width:100% !important;opacity:1 !important;visibility:visible !important;
+}
+.data-links-visual-frame figcaption{
+  padding:12px 18px;text-align:center;font-size:12px;
+  color:rgba(225,244,255,.82);background:rgba(5,18,34,.92);
+}
+@media(max-width:760px){
+ .data-links-visual{margin:22px auto 20px}
+ .data-links-visual-frame{border-radius:18px}
+ .data-links-visual-frame img{width:100% !important}
+}
+
 </style>
 </head>
 <body>
@@ -492,7 +522,14 @@ img {
    <h2>信頼できる情報を取得し、<br>関連情報へすぐアクセス。</h2>
    <p>検索結果の表示だけで終わらず、企業情報・財務情報などの取得データを分析に活用。さらに、その銘柄の株情報を深掘りしたいときは、関連情報へスムーズに移動できます。</p>
   </div>
-  <div class="data-link-grid">
+  <div class="data-links-visual">
+ <figure class="data-links-visual-frame">
+  <img src="./jsc_data_sources_links_visual.png" alt="EDINETなどの情報取得からAI分析、四季報・株価チャート・企業IRなどの関連情報確認までを示した日本株チェッカーの機能イメージ" loading="lazy" decoding="async">
+  <figcaption>情報取得 → AI分析 → 銘柄の詳細確認 → 四季報・株価チャート・企業IRなどの関連情報へ</figcaption>
+ </figure>
+</div>
+
+<div class="data-link-grid">
    <article class="data-link-card source-card">
     <div class="data-link-icon">🏛️</div>
     <span class="data-link-kicker">OFFICIAL DATA</span>
